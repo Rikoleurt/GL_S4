@@ -1,24 +1,25 @@
 package composite.syntax;
 
-public class MultiplicationExpression extends ArithmeticExpression {
-
-    public MultiplicationExpression(Expression expression1, Expression expression2) {
+public class SubtractionExpression extends ArithmeticExpression {
+    public SubtractionExpression(Expression expression1, Expression expression2) {
         super(expression1, expression2);
     }
 
     @Override
     public void prettyPrint() {
-        System.out.println(expression1.eval() + " * " + expression2.eval());
+        System.out.println(expression1.eval() + " - " + expression2.eval());
     }
+
     @Override
     public void prefixPrint() {}
+
     @Override
     public int depth(){
         return expression1.depth() + expression2.depth();
     }
+
     @Override
     public int eval(){
-        return expression1.eval() * expression2.eval();
+        return expression1.eval() - expression2.eval();
     }
-
 }
