@@ -1,7 +1,5 @@
 package composite.syntax;
 
-import java.util.function.BinaryOperator;
-
 public class ArithmeticExpression implements Expression {
 
     Expression expression1;
@@ -24,18 +22,23 @@ public class ArithmeticExpression implements Expression {
 
     @Override
     public void prettyPrint() {
-        System.out.println(getLeft(expression1) + getRight(expression2));
+        System.out.print("( ");
+        expression1.prettyPrint();
+        System.out.print(" " + operatorSymbol() + " ");
+        expression2.prettyPrint();
+        System.out.print(" )");
     }
 
     @Override
     public void prefixPrint() {
+        System.out.print("<" + operatorSymbol() + " ");
+        expression1.prefixPrint();
+        System.out.print(" ");
+        expression2.prefixPrint();
+        System.out.print(">");
     }
 
-    public String getLeft(Expression e) {
-        return e.toString();
-    }
-
-    public String getRight(Expression e) {
-        return e.toString();
+    protected String operatorSymbol() {
+        return "?";
     }
 }

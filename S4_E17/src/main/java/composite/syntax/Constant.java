@@ -1,5 +1,6 @@
 package composite.syntax;
 
+
 public class Constant implements Expression {
 
     int value;
@@ -7,6 +8,7 @@ public class Constant implements Expression {
     public Constant(int value) {
         this.value = value;
     }
+
     @Override
     public int eval() {
         return value;
@@ -19,11 +21,11 @@ public class Constant implements Expression {
 
     @Override
     public void prettyPrint() {
-        System.out.println(value);
+        System.out.print(value);
     }
 
     @Override
     public void prefixPrint() {
-        System.out.println(value);
+        System.out.print(value);
     }
 }

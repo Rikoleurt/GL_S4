@@ -66,19 +66,19 @@ public class TestCompositeExpressions {
 		System.out.println("Result : " + myExample2.eval());
 		System.out.println("Depth : " + myExample2.depth());
 
-//		loggingService.info("");
-//		myExample1.prefixPrint();
-//		loggingService.info("");
-//		loggingService.info(Integer.toString(myExample1.eval()));
-//		loggingService.info(Integer.toString(myExample1.depth()));
-//
-//		// myExample2
-//		myExample2.prettyPrint();
-//		loggingService.info("");
-//		myExample2.prefixPrint();
-//		loggingService.info("");
-//		loggingService.info(Integer.toString(myExample2.eval()));
-//		loggingService.info(Integer.toString(myExample2.depth()));
+	loggingService.info("");
+		myExample1.prefixPrint();
+	loggingService.info("");
+	loggingService.info(Integer.toString(myExample1.eval()));
+	loggingService.info(Integer.toString(myExample1.depth()));
+
+		// myExample2
+		myExample2.prettyPrint();
+		loggingService.info("");
+		myExample2.prefixPrint();
+		loggingService.info("");
+		loggingService.info(Integer.toString(myExample2.eval()));
+		loggingService.info(Integer.toString(myExample2.depth()));
 		
 	}
 
