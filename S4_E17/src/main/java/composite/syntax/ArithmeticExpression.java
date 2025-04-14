@@ -10,6 +10,7 @@ public class ArithmeticExpression implements Expression {
         this.expression2 = expression2;
     }
 
+
     @Override
     public int eval() {
         return 0;

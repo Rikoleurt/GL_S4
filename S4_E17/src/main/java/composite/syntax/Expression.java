@@ -5,12 +5,26 @@ package composite.syntax;
  */
 public interface Expression {
 
-	public int eval();
-	
-	public int depth();
-	
-	public void prettyPrint();
-	
-	public void prefixPrint();
+	/**
+	 *
+	 * @return The result of the mathematical expression
+	 */
+	int eval();
+
+	/**
+	 *
+	 * @return The number of sub-expressions that are in the general expression
+	 */
+	int depth();
+
+	/**
+	 * Infix notation (i.e " A + B ") print
+	 */
+	void prettyPrint();
+
+	/**
+	 * Prefix notation print
+	 */
+	void prefixPrint();
 
 }
