@@ -7,17 +7,30 @@ public class AdditionExpression extends ArithmeticExpression {
     }
 
     @Override
-    public int depth(){
-        return expression1.depth() + expression2.depth();
-    }
-
-    @Override
-    public int eval(){
+    public int eval() {
         return expression1.eval() + expression2.eval();
     }
 
     @Override
-    protected String operatorSymbol() {
-        return "+";
+    public int depth() {
+        return 1;
+    }
+
+    @Override
+    public void prettyPrint() {
+        System.out.print("( ");
+        expression1.prettyPrint();
+        System.out.print(" + ");
+        expression2.prettyPrint();
+        System.out.print(" )");
+    }
+
+    @Override
+    public void prefixPrint() {
+        System.out.print("<+ ");
+        expression1.prefixPrint();
+        System.out.print(" ");
+        expression2.prefixPrint();
+        System.out.print(">");
     }
 }

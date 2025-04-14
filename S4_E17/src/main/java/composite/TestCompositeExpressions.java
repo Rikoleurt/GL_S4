@@ -68,14 +68,17 @@ public class TestCompositeExpressions {
 
 	loggingService.info("");
 		myExample1.prefixPrint();
+		System.out.println();
 	loggingService.info("");
 	loggingService.info(Integer.toString(myExample1.eval()));
 	loggingService.info(Integer.toString(myExample1.depth()));
 
 		// myExample2
 		myExample2.prettyPrint();
+		System.out.println();
 		loggingService.info("");
 		myExample2.prefixPrint();
+		System.out.println();
 		loggingService.info("");
 		loggingService.info(Integer.toString(myExample2.eval()));
 		loggingService.info(Integer.toString(myExample2.depth()));

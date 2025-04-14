@@ -1,6 +1,5 @@
 package composite.syntax;
 
-
 public class Constant implements Expression {
 
     int value;
@@ -28,4 +27,5 @@ public class Constant implements Expression {
     public void prefixPrint() {
         System.out.print(value);
     }
+
 }
