@@ -10,8 +10,15 @@ public abstract class ArithmeticExpression implements Expression {
         this.expression2 = expression2;
     }
 
+<<<<<<< HEAD
     public Expression getLeft() {
         return expression1;
+=======
+
+    @Override
+    public int eval() {
+        return 0;
+>>>>>>> origin/main
     }
 
     public Expression getRight() {
