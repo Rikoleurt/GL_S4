@@ -8,29 +8,31 @@ public class DivisionExpression extends ArithmeticExpression {
 
     @Override
     public int eval() {
-        return expression1.eval() / expression2.eval();
+        int divisor = getRight().eval();
+        if (divisor == 0) throw new ArithmeticException("Error : Division by zero");
+        return getLeft().eval() / getRight().eval();
     }
 
     @Override
     public int depth() {
-        return 1;
+        return 1 + Math.max(getLeft().depth(), getRight().depth()); // Add 1 over the maximum registered depth value
     }
 
     @Override
     public void prettyPrint() {
         System.out.print("( ");
-        expression1.prettyPrint();
+        getLeft().prettyPrint();
         System.out.print(" : ");
-        expression2.prettyPrint();
+        getRight().prettyPrint();
         System.out.print(" )");
     }
 
     @Override
     public void prefixPrint() {
-        System.out.print("<: ");
-        expression1.prefixPrint();
+        System.out.print("< : ");
+        getLeft().prefixPrint();
         System.out.print(" ");
-        expression2.prefixPrint();
-        System.out.print(">");
+        getRight().prefixPrint();
+        System.out.print(" >");
     }
 }
