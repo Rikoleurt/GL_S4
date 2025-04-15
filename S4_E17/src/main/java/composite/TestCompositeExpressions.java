@@ -71,6 +71,8 @@ public class TestCompositeExpressions {
 
 		myExample1.prefixPrint();
 		System.out.println();
+		myExample1.prettyPrint();
+		System.out.println();
 		loggingService.info(Integer.toString(myExample1.eval()));
 		loggingService.info(Integer.toString(myExample1.depth()));
 
